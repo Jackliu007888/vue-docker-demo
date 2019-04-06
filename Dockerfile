@@ -1,5 +1,5 @@
 FROM node:latest
-RUN apt-get update \    && apt-get install -y nginx
+RUN apt-get update || apt-get update \    &&  apt-get install -y nginx
 WORKDIR /app
 COPY . /app/
 EXPOSE 80
